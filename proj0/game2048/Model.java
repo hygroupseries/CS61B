@@ -117,6 +117,9 @@ public class Model extends Observable {
 
         int size = board.size();
 
+        if(side != Side.NORTH)
+            board.setViewingPerspective(side);
+
         for(int col = 0; col < size; col ++) {
             for (int row = size - 2; row >= 0; row--) {
                 int nulltile = 0;
